@@ -1,0 +1,30 @@
+# Handle text files automatically. Normalize to LF everywhere (Windows and Linux).
+* text=auto eol=lf
+
+# Force files that MUST have specific line endings regardless of OS
+*.sh text eol=lf
+*.ps1 text eol=crlf
+.husky/* text eol=lf
+
+# Let Git automatically handle everything else cross-platform
+*.sln text
+*.slnx text
+*.csproj text
+*.props text
+*.targets text
+*.cs text
+*.json text
+*.yml text
+*.yaml text
+*.md text
+*.xml text
+
+# Binaries
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.zip binary
+*.dll binary
+*.exe binary

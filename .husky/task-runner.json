@@ -1,0 +1,35 @@
+{
+   "tasks": [
+      {
+         "name": "Audit Vulnerabilities",
+         "group": "pre-commit",
+         "command": "dotnet",
+         "args": [
+            "list",
+            "package",
+            "--vulnerable",
+            "--include-transitive",
+            "--no-restore"
+         ]
+      },
+      {
+         "name": "Format code",
+         "group": "pre-commit",
+         "command": "dotnet",
+         "args": [
+            "format",
+            "--verify-no-changes",
+            "--include",
+            "${staged}"
+         ]
+      },
+      {
+         "name": "Run tests",
+         "group": "pre-push",
+         "command": "dotnet",
+         "args": [
+            "test"
+         ]
+      }
+   ]
+}
